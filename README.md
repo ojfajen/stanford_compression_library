@@ -1,4 +1,5 @@
-# Basically scl but a couple of changes. For one, add VQ directory. This basically has some .dat files containing TEIs for H2O. vector_quantizer.py has quantize_integrals() function which can be used to do VQ and return/dump decoded integrals. The QC folder can be used to get DF integrals or transform decoded DF integrals to the reconstruced full integrals. Finally, the HF folder can run Hartree-Fock with TEIs read from file. 
+# Basically scl but a couple of changes. 
+For one, add VQ directory. This basically has some .dat files containing TEIs for H2O. vector_quantizer.py has quantize_integrals() function which can be used to do VQ and return/dump decoded integrals. The QC folder can be used to get DF integrals or transform decoded DF integrals to the reconstruced full integrals. Finally, the HF folder can run Hartree-Fock with TEIs read from file. 
 
 # Requires pyscf and numpy.
 
