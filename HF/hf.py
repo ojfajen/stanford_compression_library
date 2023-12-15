@@ -3,6 +3,11 @@ from numpy import linalg as LA
 import diis
 from diis import diis
 
+#######################################################################
+# Very simple HF code that I wrote a long time ago...
+#######################################################################
+
+
 class Hartree_Fock(object):
     "Load 1- and 2e-integrals, then run HF."
 

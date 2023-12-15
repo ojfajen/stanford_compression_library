@@ -248,14 +248,19 @@ def test_vector_quantization_scipy():
 
 
 def quantize_integrals():
+    #######################################################################
+    # Read in TEI from file, then do VQ with specified rate, dimensio
+    #######################################################################
     data_npy = np.loadtxt('1e4.out')
 
+    # Set parameters
     RATE =1
     dim = 1
     dr = dim*RATE
     num_vectors = 1 << (int(dr))
     codebook_npy = build_kmeans_codebook_scipy(data_npy,num_vectors,dim)
     avg_bits, avg_mse_distortion, max_diff, decoded_ints = _vq_experiment(data_npy,codebook_npy)
+    # Dump decoded integrals to file so that we can calculate HF energy later
     np.savetxt("cd.decoded.1bps.dat",decoded_ints)
     print("Max Diff: ",max_diff)
     print("Avg bits: ", avg_bits)
